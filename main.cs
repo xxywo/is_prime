@@ -12,9 +12,13 @@ class MainClass {
   }
 
   public static void Main (string[] args) {
-     if(isPrime(11)){
-       Console.Write("11 is prime");
+     for(int i = 0; i < 100; i++){
+       if(isPrime(i)){
+        Console.WriteLine("{0} is prime", i);
+      }
+
      }
+     
       
     }
   }
