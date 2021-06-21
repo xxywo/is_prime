@@ -1,13 +1,20 @@
 using System;
 
 class MainClass {
-  public static void Main (string[] args) {
-    int input = 4;
-    for(int i = 0; i < input; i++){
-      if(input%2 == 0){
-        Console.Write("false");
+  static bool isPrime(int n){
+
+    for(int i = 2; i < n; i++){
+      if(i%2 ==0){
+        return true;
       }
+    }
+    return false;
+  }
+
+  public static void Main (string[] args) {
+     if(isPrime(11)){
+       Console.Write("11 is prime");
+     }
       
     }
   }
-}
