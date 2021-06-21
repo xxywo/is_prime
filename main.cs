@@ -2,13 +2,17 @@ using System;
 
 class MainClass {
   static bool isPrime(int n){
-
+    if(n <= 1){
+      return false;
+    }
+     
     for(int i = 2; i < n; i++){
-      if(i%2 ==0){
-        return true;
+      if(n%i ==0){
+        return false;
       }
     }
-    return false;
+    
+    return true;
   }
 
   public static void Main (string[] args) {
