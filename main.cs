@@ -1,13 +1,17 @@
 using System;
-//version 1, might need to optimize
+//coding assessment for CASA
+//finished isPrime, need to optimize
 //set timer to see the performancn
-//using recusive to implement isPrime, timer indicated that the Execution time did not get shorter
-  
+//using recusive to implement isPrime, timer indicated that the Execution time did not get shorter (delete it )
+//consider that using sqrt(n) work just same as n, implemented is_Prime
+//and is_Prime have a better performancn in term of time 
 
 
 class MainClass {
   
   //original function had a Execution time of 80ms
+  //in theory, this function have time complexity  of O(n)
+  // and space complexity of O(1)
   static bool isPrime(int n){
     if(n <= 1){//when n is negative or 1
       return false;
@@ -22,13 +26,16 @@ class MainClass {
     
     return true;
   }
+
   //optimized function had a Execution time of 69ms
+  //reduce the time complexity to O(sqrt(n))
+  //and space complexity O(1)
   static bool is_Prime(int num){
     bool isp = true;
-    if(num <=1){
+    if(num <=1){//corner case
       return false;
     }
-    for(int i=2; i<= Math.Sqrt(num) ; i++)
+    for(int i=2; i<= Math.Sqrt(num) ; i++)//using sqrt(n) instead of n
         {
             if(num%i == 0)
             {
